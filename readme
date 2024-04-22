@@ -1,0 +1,38 @@
+Script de Envio de Email com Anexo em Python
+Este é um script Python para enviar emails com anexos em formato PDF usando a biblioteca win32com.client para integração com o Outlook.
+
+Funcionalidades
+Envio Automatizado de Emails: O script permite enviar emails automaticamente com anexos em formato PDF.
+Substituição de Texto no Corpo do Email: O corpo do email pode ser personalizado substituindo marcadores por valores específicos.
+Integração com o Outlook: Utiliza a biblioteca win32com.client para interagir com o Outlook e enviar os emails.
+Requisitos
+Python 3.x
+Bibliotecas Python:
+win32com para integração com o Outlook.
+Você pode instalar a biblioteca necessária executando:
+
+bash
+Copy code
+pip install pywin32
+Uso
+Configuração do ScriptAntes de usar o script, é necessário configurar os parâmetros adequados no código:
+Dados de Conexão com o Banco de Dados:
+Certifique-se de ter os dados corretos de acesso ao banco de dados.
+Configuração do Email:
+assunto: Assunto do email que será enviado.
+corpo_texto: Corpo do email. Você pode utilizar marcadores como <<id>> para serem substituídos pelos valores correspondentes.
+Caminho do Arquivo de Saída:
+Defina o caminho onde o arquivo PDF será salvo.
+Execução do ScriptExecute o script passando os parâmetros necessários:
+python
+Copy code
+envia_email(assunto='🔴 TESTE', id=1010, corpo_texto='Exemplo.')
+Exemplo
+Aqui está um exemplo completo de como utilizar o script:
+
+python
+Copy code
+envia_email(assunto='🔴 TESTE', id=1010, corpo_texto='Exemplo.')
+Observações
+Certifique-se de que o Outlook esteja configurado e em execução no computador onde o script será executado.
+O arquivo PDF será anexado ao email a partir do caminho especificado.
